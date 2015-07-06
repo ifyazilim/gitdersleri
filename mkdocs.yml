@@ -1,6 +1,12 @@
 site_name: Git Dersleri
+site_url: http://ifyazilim.github.io/gitdersleri
+repo_url: https://github.com/ifyazilim/gitdersleri
+repo_name: GitHub
+site_author: İrfan Evrens
+strict: true
 pages:
   - Ana Sayfa: index.md
   - Başlangıç:
     - Depo (Repository) Oluşturalım: baslangic/depo-olusturalim.md
     - Değişiklikleri Kaydedelim: baslangic/degisiklikleri-kaydedelim.md
+theme: readthedocs
