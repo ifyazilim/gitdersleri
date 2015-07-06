@@ -58,3 +58,16 @@ Yeni bir projeye başlarken ```git add``` komutu SVN'deki ```svn import``` komut
 git add .
 git commit
 ```
+
+Proje üzerinde çalışmaya başladığınızda aşağıdaki komutlarla yeni dosyalar ekleyebilirsiniz.
+
+```
+git add merhaba.txt
+git commit
+```
+
+Yukarıdaki komut aynı zamanda mevcut dosya değişkliklerinde de kullanılabilir. Git açısından bakıldığında bir dosyanın henüz yeni olması ya da üzerinde değişiklikler yapılan eski bir dosya olması önemli değildir. Her halükarda yapılan değişiklikler öncelikle Geçiş Bölgesi'ne alınır ve daha sonra commitlenir.
+
+## ```git commit```
+
+Bu komut ile Geçiş Bölgesi'nde yer alan değişiklikler proje geçmişine eklenir ve Geçiş Bölgesi temizlenir. Commitlenmiş değişiklikler bir projenin güvenli bir kopyası anlamındadır. Git commitlenen bu değişiklikleri özellikle müdahale edilmediği müddetçe değiştirmeyecektir. Bu komut ```git add``` komutu ile birlikte en önemli Git komutlarındandır.
