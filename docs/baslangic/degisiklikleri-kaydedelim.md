@@ -1,6 +1,6 @@
 # Değişiklikleri Kaydedelim
 
-![Değişiklikleri Kaydedelim](https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/degisiklikleri-kaydedelim/hero.svg)
+![Değişiklikleri Kaydedelim](https://www.atlassian.com/git/images/tutorials/getting-started/saving-changes/hero.svg)
 
 ## git add
 

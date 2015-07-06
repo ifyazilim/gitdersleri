@@ -42,7 +42,7 @@ SVN ile karşılaştırıldığında ```git init``` komutu ile versiyon kontroll
 
 ```--bare``` işareti ile  Git deposu oluşturulur ancak çalışma dizini yer almaz. Bu gibi depolarda dosyaları düzenlemek ya da değişiklikleri commit etmek mümkün değildir. Merkez Git depoları yalın depo olarak oluşturulmalıdır. Çünkü yalın olmayan bir depoya dalları göndermek değişiklikerin üzerine yazılmasını sağlayabilir. Şu şekilde de düşünebiliriz. Eğer bir depo ```--bare``` işareti ile oluşturulduysa bu depo kodların sadece saklandığı ve üzerinde geliştirme yapılmadığı bir depo olarak düşünülebilir. Böylece merkezi depoya yalın depo, diğer geliştiricilerin depolarına  da yalın olmayan depolar debilebilir.
 
-![Yalın ve Yalın Olmayan Depolar](https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/01.svg)
+![Yalın ve Yalın Olmayan Depolar](https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository//01.svg)
 
 ### Örnek
 
@@ -84,9 +84,9 @@ Git'in çalışan kopya mantığı SVN ile karşılaştırıldığında çok far
 
 Bu farklı bakış açısı Git projesinde birlikte çalışma mantığı ile SVN projesindeki birlikte çalışma mantığının birbirinden farklı olmasını sağlar. SVN'de bilgisayarımızdaki proje kopyası merkezi depoya bağımlu iken Git ile bu ilişki Depo'dan Depo'ya şeklindedir. SVN'in merkezi deposuna çalışan kopyayı göndermek yerine Git, depodan depoya ```push``` ve ```pull``` komutlarını kullanarak veri aktarımı sağlar.
 
-![SVN'de Merkezi Depo ve Çalışan Kopya Mantığı](https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/03.svg)
+![SVN'de Merkezi Depo ve Çalışan Kopya Mantığı](https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository//03.svg)
 
-![Git'de Depo'dan Depo'ya Mantığı](https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/02.svg)
+![Git'de Depo'dan Depo'ya Mantığı](https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository//02.svg)
 
 Esasen her bir Git deposuna özel anlam da yüklenebilir. Örneğin depolardan birisini merkezi depo olarak görmek ve diğerlerini çalışan kopya görmek gibi. Böyle bir yaklaşım Merkezi İş Akışı şeklinde özetlenebilir. Bu yaklaşım ile versiyon kontrol sistemlerine baktığımızda bakış açımızın daha başarılı olduğunu söyleyebiliriz.
 
