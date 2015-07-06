@@ -63,4 +63,4 @@ yazılmasını sağlayabilir. Şu şekilde de düşünebiliriz. Eğer bir depo `
 bu depo kodların sadece saklandığı ve üzerinde geliştirme yapılmadığı bir depo olarak düşünülebilir. 
 Böylece merkezi depoya yalın depo, diğer geliştiricilerin depolarına  da yalın olmayan depolar debilebilir.
 
-![](https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository/01.svg)
+![Yalın ve Yalın Olmayan Depolar](https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository/01.svg)
