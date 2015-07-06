@@ -41,7 +41,7 @@ Bu komut ```dizin``` adında bir klasör oluşturur ve klasörün içini de git 
 git init --bare <dizin>
 ```
 
-```TODO```
+- [ ] yapılacak
 
 ### Tartışma
 
