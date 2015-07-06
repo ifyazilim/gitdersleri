@@ -85,3 +85,63 @@ Bu farklı bakış açısı Git projesinde birlikte çalışma mantığı ile SV
 ![SVN'de Merkezi Depo ve Çalışan Kopya Mantığı](https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/03.svg)
 
 ![Git'de Depo'dan Depo'ya Mantığı](https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/02.svg)
+
+Esasen her bir Git deposuna özel anlam da yüklenebilir. Örneğin depolardan birisini merkezi depo olarak görmek ve diğerlerini çalışan kopya görmek gibi. Böyle bir yaklaşım Merkezi İş Akışı şeklinde özetlenebilir. Bu yaklaşım ile versiyon kontrol sistemlerine baktığımızda bakış açımızın daha başarılı olduğunu söyleyebiliriz.
+
+### Örnek
+
+Aşağıdaki örnek ```deneme.com``` üzerinde ssh ile erişilebilen merkezi bir depodan lokal kopya oluşturmak için verilebilir;
+
+```
+git clone ssh://ahmet@deneme.com/proje/deposunun/yolu/proje-dizini.git 
+cd proje-dizini
+# Proje üzerinde çalışmaya başla
+```
+
+İlk satırdaki komut bulunduğumuz dizinde yeni bir ```proje-dizini``` oluşturur ve merkez deponun içeriğini oluşturulan bu dizine kopyalar. Daha sonra proje klasörünün içine girebilir dosyalar üzerinde değişikliklere başlayabilir, yapılan değişiklikleri merkezi depoya ya da diğer depolara gönderebilirsiniz. Ayrıca ```.git``` uzantısı klonlanmış depo için göz ardı edilecektir. Böylece klonlanmış yeni lokal depomuz yalın olmayan (non-bare) bir depo olacaktır.
+
+## git config
+
+Bu komut ile bilgisayarınızdaki Git programını ya da her bir projeyi kendi içinde konfigüre edebilirsiniz. Bu komut ile kullanıcıya ait bilgilerden tutunda bir deponun nasıl davranacağına kadar herşeyi konfigüre etmenizi sağlar. Genel olarak kullanılan konfigürasyon seçenekleri aşağıda listelenmiştir.
+
+### Kullanımı
+
+```
+git config user.name <kullaniciadi>
+```
+
+Bu komut ile aktif depo üzerinde geliştirme yapan geliştiricinin adı tanımlanmış olur. Genel olarak ```--global``` işareti ile birlikte kullanılmaktadır.
+
+```
+git config --global user.name <kullaniciadi>
+```
+
+Bu şekilde kullanıldığında sistemi kullanan kullanıcının yapacağı tüm commitlerde kullanılacak isim bilgisi kaydedilmiş olacaktır.
+
+```
+git config --global user.email <mailadresi>
+```
+
+Kullanıcının yapacağı commitlerde kullanılmak üzere kullanıcıya ait mail adresini genel olarak ayarlak için kullanılır.
+
+```
+git config --global alias.<takma-isim> <git-komutu>
+```
+
+Bir Git komutu için takma isim oluşturur. Böylece aynı işi yapan bir komut farklı bir isim ile kullanılabilir.
+
+```
+git config --system core.editor <metin-etitörü>
+```
+
+Git komutları için kullanılacak varsayılan metin editörünü ayarlamak için kullanılır. Ör: geany
+
+```
+git config --global --edit
+```
+
+Bu komut ile varsayılan metin editörü kullanılarak global konfigürasyon dosyası düzenlenmek üzere açılır.
+
+### Tartışma
+
+Tüm konfigürasyon seçenekleri düz metin dosyalarında saklanır. Bu ayarları değiştirmek için ```git config``` komutu, komut satırında kullanılmaya uygundur. Genel olarak ilk Git kurulumunda ```--global``` olarak bir çok ayar yapılmakta ve proje geliştirme aşamasına geçilmektedir.
