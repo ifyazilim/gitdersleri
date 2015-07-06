@@ -145,3 +145,54 @@ Bu komut ile varsayılan metin editörü kullanılarak global konfigürasyon dos
 ### Tartışma
 
 Tüm konfigürasyon seçenekleri düz metin dosyalarında saklanır. Bu ayarları değiştirmek için ```git config``` komutu, komut satırında kullanılmaya uygundur. Genel olarak ilk Git kurulumunda ```--global``` olarak bir çok ayar yapılmakta ve proje geliştirme aşamasına geçilmektedir.
+
+Git konfigürasyon seçeneklerini 3 farklı dosya da saklar. Bunlar, depo, kullanıcı ve sistem şeklindedir.
+
+ * ```<depo>/.git/config``` - Depo bazlı ayarlar.
+ * ```~/.gitconfig``` Kullanıcı bazlı ayarlar. ```--global``` işareti ile ayarlanan konfigürasyon seçenekleri bu dosya da saklanır.
+ * ```$(prefix)/etc/gitconfig``` - Sistem genelinde kullanılan ayarlar.
+ 
+Bu dosyalardaki aynı ayar yer alırsa öncelik depo, sonra kullanıcı ve sonra da sistem'dir. Bu dosyalardan herhangi birini açtığınızda aşağıdakine benzer bir içerik görünecektir.
+
+```
+[user] 
+    name = Ahmet Hamdi
+    email = ahmet@deneme.com
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    up = rebase
+    ci = commit
+[core]
+    editor = geany
+   	excludesfile = /home/ahmethamdi/.gitignore_global 
+```
+
+Bu bilgileri değiştirdiğinizde de ```git config``` ile aynı etki görülecektir.
+
+### Örnek
+
+Git'i kurduktan sonra ilk iş olarak adınızı ve mail adresinizi ayarlamak ve bazı varsayılan ayarları değiştirmek olacaktır. Yapılan ayarlar genel olarak aşağıdakiler benzer şeyler olacaktır.
+
+```
+# Git bizi nasıl tanısın istersiniz
+git config --global user.name "Ahmet Hamdi"
+git config --global user.email ahmet@deneme.com
+```
+
+```
+# Favori metin editörünü ayarlayalım
+git config --global core.editor geany
+```
+
+```
+# SVN benzeri bazı komut alsyasları oluşturalım
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.up rebase
+git config --global alias.ci commit
+```
+
+Bu komutlar ile yapılan değişiklikler ```~/.gitconfig``` dosyasına yansıyacaktır.
