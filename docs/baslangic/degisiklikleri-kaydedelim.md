@@ -92,3 +92,10 @@ Eğer isterseniz metin editörü açmadan doğrudan komut satırına yukarıdaki
 git commit -a
 ```
 
+Bu komut ile çalışılan projenin değişen dosyaları commit edilir. Üzerinde değişiklik yapılmış dosyalar daha önceden commitlenmiş ve geçmiş kaydı bulunan dosyalardır.
+
+### Tartışma
+
+Geçiş Bölgesi'ne alınan değişiklikler her zaman lokaldeki depoya commitlenir. Bu özelliği ile SVN'den ayrılmaktadır. SVN'de commitler merkezi depoya gönderilir. Git ise sizi merkezi bir depo ile çalışmaya zorlamaz. Ne zaman istereniz lokalde yapmış olduğunuz değişiklikleri merkezi depoya gönderebilirsiniz. Geçiş Bölgesi çalışılan dizin ile proje geçmişi arasında tampon bölge olarak düşünüleceği gibi her bir geliştiricinin lokal deposu da yaptıkları değişiklikler ile merkezi depo arasında tampon bir bölgedir.
+
+Bu özellik Git kullanan geliştiricilerin çalışma şekillerini değiştirmiştir. Yapılan bir değişikliği merkezi bir depoaya sürekli commitlemek yerine yapılan değişiklikler commitler aracılığı ile lokal depoda biriktirilir. Daha sonra belli aralıklarda merkezi depoya yapılan değişiklikler topluca gönderilir. Bu çalışma mantığı SVN'in çalışma mantığından daha avantajlıdır. Yapılacak belirlenmiş bir revizyon atomik commitler ile tamamlanabilir. Bu şekilde benzer işleri yapmak için yapılan commitler gruplar halinde yönetilebilir olacaktır.
