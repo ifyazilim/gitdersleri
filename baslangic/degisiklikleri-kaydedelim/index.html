@@ -181,7 +181,18 @@ git commit
 <pre><code>git commit
 </code></pre>
 
-<p>Geçiş bölgesini commit etmek için kullanılır.</p>
+<p>Geçiş bölgesini commit etmek için kullanılır. Bu komut kullanıldığında commit mesajının girilmesi için bir metin editörü açılır ve sizden commit ile ilgili bir mesaj girmeniz beklenir. Mesaj girildikten sonra dosyayı kaydedip çıkış yaptığınızda aşağıdaki komutun işlevi yapılmış olur.</p>
+<pre><code>git commit -m &quot;&lt;mesaj&gt;&quot;
+</code></pre>
+
+<p>Eğer isterseniz metin editörü açmadan doğrudan komut satırına yukarıdaki <code>&lt;mesaj&gt;</code> alanına yapılan değişiklikler ile alakalı bir açıklama girilerek Geçiş Bölgesi'ndeki değişiklikler proje geçmişne commit edilmiş olur.</p>
+<pre><code>git commit -a
+</code></pre>
+
+<p>Bu komut ile çalışılan projenin değişen dosyaları commit edilir. Üzerinde değişiklik yapılmış dosyalar daha önceden commitlenmiş ve geçmiş kaydı bulunan dosyalardır.</p>
+<h3 id="tartsma_1">Tartışma</h3>
+<p>Geçiş Bölgesi'ne alınan değişiklikler her zaman lokaldeki depoya commitlenir. Bu özelliği ile SVN'den ayrılmaktadır. SVN'de commitler merkezi depoya gönderilir. Git ise sizi merkezi bir depo ile çalışmaya zorlamaz. Ne zaman istereniz lokalde yapmış olduğunuz değişiklikleri merkezi depoya gönderebilirsiniz. Geçiş Bölgesi çalışılan dizin ile proje geçmişi arasında tampon bölge olarak düşünüleceği gibi her bir geliştiricinin lokal deposu da yaptıkları değişiklikler ile merkezi depo arasında tampon bir bölgedir.</p>
+<p>Bu özellik Git kullanan geliştiricilerin çalışma şekillerini değiştirmiştir. Yapılan bir değişikliği merkezi bir depoaya sürekli commitlemek yerine yapılan değişiklikler commitler aracılığı ile lokal depoda biriktirilir. Daha sonra belli aralıklarda merkezi depoya yapılan değişiklikler topluca gönderilir. Bu çalışma mantığı SVN'in çalışma mantığından daha avantajlıdır. Yapılacak belirlenmiş bir revizyon atomik commitler ile tamamlanabilir. Bu şekilde benzer işleri yapmak için yapılan commitler gruplar halinde yönetilebilir olacaktır. Bu ayrıca geliştiricilerin izole bir ortamda geliştirme yapabilmelerini de sağlar. Yapılması gereken işler ve değişiklikler tamamlandıktan sonra yapılan çalışmalar merkeze gönderilir.</p>
               
             </div>
           </div>
