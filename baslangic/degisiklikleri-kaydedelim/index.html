@@ -117,7 +117,7 @@
     <li class="wy-breadcrumbs-aside">
       
         
-          <a href="https://github.com/ifyazilim/gitdersleri/" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/ifyazilim/gitdersleri" class="icon icon-github"> Edit on GitHub</a>
         
       
     </li>
@@ -127,12 +127,12 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="degisiklikleri-kaydedelim">Değişiklikleri Kaydedelim<a class="headerlink" href="#degisiklikleri-kaydedelim" title="Permanent link">&para;</a></h1>
+                <h1 id="degisiklikleri-kaydedelim">Değişiklikleri Kaydedelim</h1>
 <p><img alt="Değişiklikleri Kaydedelim" src="https://www.atlassian.com/git/images/tutorials/getting-started/saving-changes/hero.svg" /></p>
-<h2 id="git-add">git add<a class="headerlink" href="#git-add" title="Permanent link">&para;</a></h2>
+<h2 id="git-add">git add</h2>
 <p>Bu komut depodaki bir değişikliği Geçiş Bölgesi'ne (Staging Area) ekler. Bir sonraki commit'de hangi dosyalarda değişiklikler olduğunu belirtir. Bununla beraber <code>git add</code> komutunun depo üzerinde bir etkisi olmaz. Yapılan değişiklikler depo içine ancak <code>git commit</code> komutu ile dahil edilebilir. Bu nedenle <code>git add</code> komutu ile eklenen dosyalar Geçiş Bölgesi'ne alınır.</p>
 <p>Bu komutlar ile birlikte <code>git status</code> komutu da kullanılmaktadır. Bu komut ile de çalıştığımız deponun ve Geçiş Bölgesi'nin genel durumuna bakılabilir.</p>
-<h3 id="kullanm">Kullanımı<a class="headerlink" href="#kullanm" title="Permanent link">&para;</a></h3>
+<h3 id="kullanm">Kullanımı</h3>
 <pre><code>git add &lt;dosya&gt;
 </code></pre>
 
@@ -152,7 +152,7 @@
 <li><code>a</code> - Geçiş Bölgesi'ne gönder ve kalan değişiklikler için de aynısını yap.</li>
 <li><code>d</code> - Dosya bazlı olarak mevcut değişikliği kalan değişiklikleri gözardı et.</li>
 </ul>
-<h3 id="tartsma">Tartışma<a class="headerlink" href="#tartsma" title="Permanent link">&para;</a></h3>
+<h3 id="tartsma">Tartışma</h3>
 <p><code>git add</code> ve <code>git commit</code> komutları Git iş akışının temellerini oluşturmaktadır. Bu iki komut Git'i kullanmak isteyen herkes tarafından, ekip ya da bireysel olsun, iyi anlaşılması gerekir. Bu komutların yaptığı iş kısaca depo için versiyon geçmişlerini oluşturmak ve bunları kayıt altına almaktır.</p>
 <p>Bir proje üzerinde çalışmak genel olarak düzenle/geçiş bölgesine gönder/commit yap şeklindedir. Öncelikle üzerinde değişiklik yapılması gereken dosyalar üzerinde gerekli değişiklikler yapılır. Yapılacak değişiklikler tamamlandıysa yapılan değişiklikler <code>git add</code> komutu ile Geçiş Bölgesi'ne gönderilir. Daha sonra Geçiş Bölgesi'ndeki mevcut durumdan memnunsanız, yani herhangi bir aksaklık ya da eksiklik yoksa proje üzerinde yapılan değişiklikleri proje geçmişine yazılmak üzere <code>git commit</code> komutu kullanılır.</p>
 <p><img alt="Değişiklikleri Kaydedelim" src="https://www.atlassian.com/git/images/tutorials/getting-started/saving-changes/01.svg" /></p>

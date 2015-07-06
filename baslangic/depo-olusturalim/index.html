@@ -121,7 +121,7 @@
     <li class="wy-breadcrumbs-aside">
       
         
-          <a href="https://github.com/ifyazilim/gitdersleri/" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/ifyazilim/gitdersleri" class="icon icon-github"> Edit on GitHub</a>
         
       
     </li>
@@ -131,14 +131,14 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="depo-repository-olusturalm">Depo (Repository) Oluşturalım<a class="headerlink" href="#depo-repository-olusturalm" title="Permanent link">&para;</a></h1>
+                <h1 id="depo-repository-olusturalm">Depo (Repository) Oluşturalım</h1>
 <p><img alt="Depo (Repository) Oluşturalım" src="https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository/hero.svg" /></p>
 <p>Bu ders en önemli Git komutlarından bazıları hakkında bilgiler içermektedir. İlk önce versiyon kontrollü bir projeye başlamak için yapılması gereken ilk iş olan repository oluşturma kısmından bahsedilecek. Daha sonraki kısımlarda ise günlük olarak kullanılan git komutları anlatılacak.</p>
 <p>Bu dersin sonunda yeni bir git destekli bir proje oluşturabilecek, mevcut projenin anlık kopyasını alabilecek ve proje üzerinde ne gibi değişiklikler yapıldığını görebileceksiniz.</p>
-<h2 id="git-init">git init<a class="headerlink" href="#git-init" title="Permanent link">&para;</a></h2>
+<h2 id="git-init">git init</h2>
 <p><code>git init</code> komutu ile yeni bir Git deposu oluşturulur. Henüz git versiyonlama aktif edilmemiş bir proje için ya da henüz başlangıç yapılmamış yeni bir proje için bu komut ile versiyonlamayı aktif hale getirebilirsiniz. Bu komut haricindeki diğer Git komutları genel olarak bu komuttan sonra kullanılabilir olacaktır. Bu nedenle yeni bir projede ilk çalıştırılacak komut da budur.</p>
 <p><code>git init</code> komutu çalıştırılan dizinde <code>.git</code> isminde yeni bir dizin oluşturur. Bu dizin içinde git deposu için gerekli tüm bilgiler bulunmaktadır. Bu bilgilere genel olarak <code>metadata</code> denmektedir. SVN gibi projedeki her klasörün içine revizyon bilgileri tutmak için klasör ya da dosya oluşturmaz. Projenin kök dizinine sadece bir adet dizin oluşturur. Bu şekilde projenin içi genel olara kirlenmemiş olur. (Daha önce SVN kullananlar ve ilk kez Git öğrenenler için bu, önemli bir ayrıntıdır.)</p>
-<h3 id="kullanm">Kullanımı<a class="headerlink" href="#kullanm" title="Permanent link">&para;</a></h3>
+<h3 id="kullanm">Kullanımı</h3>
 <pre><code>git init
 </code></pre>
 
@@ -151,13 +151,13 @@
 </code></pre>
 
 <p>Üzerinde geliştirme yapılmamak üzere ve merkez depolar oluşturmak için kullanılır. Geliştiriciler arasında paylaşılan merkezi depolar <code>--bare</code> ile işaretlenerek oluşturulmalıdır. Bu şekilde yalın depolar oluşturulurken genel olarak kullanılan dizinin sonuna <code>.git</code> eklenir. Örneğin yalın bir deponun klasör ismi şu şekilde olabilir: <code>proje-dizini.git</code></p>
-<h3 id="tartsma">Tartışma<a class="headerlink" href="#tartsma" title="Permanent link">&para;</a></h3>
+<h3 id="tartsma">Tartışma</h3>
 <p>SVN ile karşılaştırıldığında <code>git init</code> komutu ile versiyon kontrollü projeler oluşturmak son derece kolaydır. Git, bir depo oluşturmanıza, dosyaları içeri aktarmanıza ya da mevcut bir depoyu kopyalamanıza gerek duymaz. Tek yapmanız gereken <code>cd</code> komutuyla dizinin içine girmeniz ve <code>git init</code> komutunu çalıştırmanız. Böylece Git deponuz hazır hale gelecektir.</p>
 <p>Çoğu projede <code>git init</code> komutu merkezi bir depo oluşturulurken kullanılır ve geliştiriciler kendi bilgisayarlarında <code>git clone</code> komutunu kullanırlar. Böylece merkezi depoda yer alan projeyi kendi bilgisayarlarına almış olur ve Git deposu kullanıma hazır olacaktır.</p>
-<h4 id="bare-yaln-cplak-depolar">Bare (yalın, çıplak) Depoları<a class="headerlink" href="#bare-yaln-cplak-depolar" title="Permanent link">&para;</a></h4>
+<h4 id="bare-yaln-cplak-depolar">Bare (yalın, çıplak) Depoları</h4>
 <p><code>--bare</code> işareti ile  Git deposu oluşturulur ancak çalışma dizini yer almaz. Bu gibi depolarda dosyaları düzenlemek ya da değişiklikleri commit etmek mümkün değildir. Merkez Git depoları yalın depo olarak oluşturulmalıdır. Çünkü yalın olmayan bir depoya dalları göndermek değişiklikerin üzerine yazılmasını sağlayabilir. Şu şekilde de düşünebiliriz. Eğer bir depo <code>--bare</code> işareti ile oluşturulduysa bu depo kodların sadece saklandığı ve üzerinde geliştirme yapılmadığı bir depo olarak düşünülebilir. Böylece merkezi depoya yalın depo, diğer geliştiricilerin depolarına  da yalın olmayan depolar debilebilir.</p>
 <p><img alt="Yalın ve Yalın Olmayan Depolar" src="https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository//01.svg" /></p>
-<h3 id="ornek">Örnek<a class="headerlink" href="#ornek" title="Permanent link">&para;</a></h3>
+<h3 id="ornek">Örnek</h3>
 <p>Bir projenin yerel bir kopyasını oluşturmak için genel olarak <code>git clone</code> kullanılmakta. <code>git init</code> komutu ise merkezi proje depoları oluşturmak için kullanılır. Örnek kodlar şu şekilde olabilir;</p>
 <pre><code>ssh &lt;kullanici&gt;@&lt;host&gt;
 cd /proje/deposunun/yolu
@@ -165,9 +165,9 @@ git init --bare proje-dizini.git
 </code></pre>
 
 <p>Öncelikle merkezi deponun yer alacağı sunucuya ssh ile giriş yapınız. Daha sonra projenin hangi dizinde olmasını istiyorsanız o dizini açın. Son olarak ise <code>--bare</code> kullanarak merkezi depoyu oluşturun. Daha sonra geliştiriciler projenin bir kopyasını kendi bilgisayarlarına <code>git clone proje-dizini.git</code> şeklinde alabilirler. </p>
-<h2 id="git-clone">git clone<a class="headerlink" href="#git-clone" title="Permanent link">&para;</a></h2>
+<h2 id="git-clone">git clone</h2>
 <p>Bu komut mevcut bir git deposunu kopyalamak için kullanılmaktadır. Bu komut SVN'deki <code>svn checkout</code> ile hemen hemen aynı işlevi görür. Farklı olarak ise kopyalanan deponun tam teşekküllü bir Git deposu olmasıdır. Yani kendi geçmiş kayıtlarına sahip ve kendi dosyaları ile klasörleri olan merkezi depodan tamamen izole edilmiş haldedir.</p>
-<h3 id="kullanm_1">Kullanımı<a class="headerlink" href="#kullanm_1" title="Permanent link">&para;</a></h3>
+<h3 id="kullanm_1">Kullanımı</h3>
 <pre><code>git clone &lt;depo&gt;
 </code></pre>
 
@@ -176,15 +176,15 @@ git init --bare proje-dizini.git
 </code></pre>
 
 <p>Bu komut ile de kaynak depo bulunduğumuz dizinde, komutta belirtilen <code>&lt;dizin&gt;</code> adında bir dizin oluşturulacak ve kaynak depo içeriği bu oluşturulan klasör içine kopyalanacaktır.</p>
-<h3 id="tartsma_1">Tartışma<a class="headerlink" href="#tartsma_1" title="Permanent link">&para;</a></h3>
+<h3 id="tartsma_1">Tartışma</h3>
 <p>Bir proje merkezi git deposu olarak oluşturulduysa <code>git clone</code> komutu geliştirme ve değişiklik yapmak için projenin bir kopyasını almak için kullanılır. <code>git init</code> komutunda olduğu gibi klonlama işlemi bir kez yapılır. Kopyalama tamamlandıktan sonra tüm versiyon kontrol işlemleri ve proje üzerinde değişiklikler yapılmaya hazır demektir. </p>
-<h4 id="depodan-depoya-birlikte-calsma-collaboration">Depo'dan Depo'ya Birlikte Çalışma (Collaboration)<a class="headerlink" href="#depodan-depoya-birlikte-calsma-collaboration" title="Permanent link">&para;</a></h4>
+<h4 id="depodan-depoya-birlikte-calsma-collaboration">Depo'dan Depo'ya Birlikte Çalışma (Collaboration)</h4>
 <p>Git'in çalışan kopya mantığı SVN ile karşılaştırıldığında çok farklıdır. Git ile çalışırken her depo kendi başına tam teşekküllü bir depo olarak ele alınmalıdır.</p>
 <p>Bu farklı bakış açısı Git projesinde birlikte çalışma mantığı ile SVN projesindeki birlikte çalışma mantığının birbirinden farklı olmasını sağlar. SVN'de bilgisayarımızdaki proje kopyası merkezi depoya bağımlu iken Git ile bu ilişki Depo'dan Depo'ya şeklindedir. SVN'in merkezi deposuna çalışan kopyayı göndermek yerine Git, depodan depoya <code>push</code> ve <code>pull</code> komutlarını kullanarak veri aktarımı sağlar.</p>
 <p><img alt="SVN'de Merkezi Depo ve Çalışan Kopya Mantığı" src="https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository//03.svg" /></p>
 <p><img alt="Git'de Depo'dan Depo'ya Mantığı" src="https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository//02.svg" /></p>
 <p>Esasen her bir Git deposuna özel anlam da yüklenebilir. Örneğin depolardan birisini merkezi depo olarak görmek ve diğerlerini çalışan kopya görmek gibi. Böyle bir yaklaşım Merkezi İş Akışı şeklinde özetlenebilir. Bu yaklaşım ile versiyon kontrol sistemlerine baktığımızda bakış açımızın daha başarılı olduğunu söyleyebiliriz.</p>
-<h3 id="ornek_1">Örnek<a class="headerlink" href="#ornek_1" title="Permanent link">&para;</a></h3>
+<h3 id="ornek_1">Örnek</h3>
 <p>Aşağıdaki örnek <code>deneme.com</code> üzerinde ssh ile erişilebilen merkezi bir depodan lokal kopya oluşturmak için verilebilir;</p>
 <pre><code>git clone ssh://ahmet@deneme.com/proje/deposunun/yolu/proje-dizini.git 
 cd proje-dizini
@@ -192,9 +192,9 @@ cd proje-dizini
 </code></pre>
 
 <p>İlk satırdaki komut bulunduğumuz dizinde yeni bir <code>proje-dizini</code> oluşturur ve merkez deponun içeriğini oluşturulan bu dizine kopyalar. Daha sonra proje klasörünün içine girebilir dosyalar üzerinde değişikliklere başlayabilir, yapılan değişiklikleri merkezi depoya ya da diğer depolara gönderebilirsiniz. Ayrıca <code>.git</code> uzantısı klonlanmış depo için göz ardı edilecektir. Böylece klonlanmış yeni lokal depomuz yalın olmayan (non-bare) bir depo olacaktır.</p>
-<h2 id="git-config">git config<a class="headerlink" href="#git-config" title="Permanent link">&para;</a></h2>
+<h2 id="git-config">git config</h2>
 <p>Bu komut ile bilgisayarınızdaki Git programını ya da her bir projeyi kendi içinde konfigüre edebilirsiniz. Bu komut ile kullanıcıya ait bilgilerden tutunda bir deponun nasıl davranacağına kadar herşeyi konfigüre etmenizi sağlar. Genel olarak kullanılan konfigürasyon seçenekleri aşağıda listelenmiştir.</p>
-<h3 id="kullanm_2">Kullanımı<a class="headerlink" href="#kullanm_2" title="Permanent link">&para;</a></h3>
+<h3 id="kullanm_2">Kullanımı</h3>
 <pre><code>git config user.name &lt;kullaniciadi&gt;
 </code></pre>
 
@@ -219,7 +219,7 @@ cd proje-dizini
 </code></pre>
 
 <p>Bu komut ile varsayılan metin editörü kullanılarak global konfigürasyon dosyası düzenlenmek üzere açılır.</p>
-<h3 id="tartsma_2">Tartışma<a class="headerlink" href="#tartsma_2" title="Permanent link">&para;</a></h3>
+<h3 id="tartsma_2">Tartışma</h3>
 <p>Tüm konfigürasyon seçenekleri düz metin dosyalarında saklanır. Bu ayarları değiştirmek için <code>git config</code> komutu, komut satırında kullanılmaya uygundur. Genel olarak ilk Git kurulumunda <code>--global</code> olarak bir çok ayar yapılmakta ve proje geliştirme aşamasına geçilmektedir.</p>
 <p>Git konfigürasyon seçeneklerini 3 farklı dosya da saklar. Bunlar, depo, kullanıcı ve sistem şeklindedir.</p>
 <ul>
@@ -243,7 +243,7 @@ cd proje-dizini
 </code></pre>
 
 <p>Bu bilgileri değiştirdiğinizde de <code>git config</code> ile aynı etki görülecektir.</p>
-<h3 id="ornek_2">Örnek<a class="headerlink" href="#ornek_2" title="Permanent link">&para;</a></h3>
+<h3 id="ornek_2">Örnek</h3>
 <p>Git'i kurduktan sonra ilk iş olarak adınızı ve mail adresinizi ayarlamak ve bazı varsayılan ayarları değiştirmek olacaktır. Yapılan ayarlar genel olarak aşağıdakiler benzer şeyler olacaktır.</p>
 <pre><code># Git bizi nasıl tanısın istersiniz
 git config --global user.name &quot;Ahmet Hamdi&quot;
