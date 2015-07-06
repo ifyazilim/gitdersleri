@@ -156,6 +156,9 @@
 <p><code>git add</code> ve <code>git commit</code> komutları Git iş akışının temellerini oluşturmaktadır. Bu iki komut Git'i kullanmak isteyen herkes tarafından, ekip ya da bireysel olsun, iyi anlaşılması gerekir. Bu komutların yaptığı iş kısaca depo için versiyon geçmişlerini oluşturmak ve bunları kayıt altına almaktır.</p>
 <p>Bir proje üzerinde çalışmak genel olarak düzenle/geçiş bölgesine gönder/commit yap şeklindedir. Öncelikle üzerinde değişiklik yapılması gereken dosyalar üzerinde gerekli değişiklikler yapılır. Yapılacak değişiklikler tamamlandıysa yapılan değişiklikler <code>git add</code> komutu ile Geçiş Bölgesi'ne gönderilir. Daha sonra Geçiş Bölgesi'ndeki mevcut durumdan memnunsanız, yani herhangi bir aksaklık ya da eksiklik yoksa proje üzerinde yapılan değişiklikleri proje geçmişine yazılmak üzere <code>git commit</code> komutu kullanılır.</p>
 <p><img alt="Değişiklikleri Kaydedelim" src="https://www.atlassian.com/git/images/tutorials/getting-started/saving-changes/01.svg" /></p>
+<p><code>git add</code> komutu SVN'deki dosyayı depoya eklemeye yarayan <code>svn add</code> komutu ile karıştırılmamalıdır. Git'de <code>git add</code> komutu ara bir katmanda daha soyut bir şekilde çalışır. Yani bir dosya üzerinde her yaptığınız değişikliği <code>git add</code> komutunun çalıştırılması gerekir. Bu işlemin her defasında yapılması gereksiz gibi görünebilir. Fakat bu şekilde çalışmak üzerinde çalışılan projenin daha organize bir şekilde geliştirilmesini sağlar.</p>
+<h4 id="gecis-bolgesi-the-staging-area">Geçiş Bölgesi (The Staging Area)</h4>
+<p>Geçiş Bölgesi Git'in diğer sistemlere nazaran benzersiz özelliklerinden  birisidir. Özellikle SVN'den ya da Mercurial'dan gelen kullanıcılar için bu özelliği anlamak biraz zaman alabilir. Daha basit ifade etmek gerekirse, Geçiş Bölgesi, proje geçmişi ile çalışma dizini arasında tampon bir bölgedir.</p>
               
             </div>
           </div>
