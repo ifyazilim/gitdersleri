@@ -123,7 +123,29 @@
 <h1 id="degisiklikleri-kaydedelim">Değişiklikleri Kaydedelim</h1>
 <p><img alt="Değişiklikleri Kaydedelim" src="https://www.atlassian.com/git/images/tutorials/getting-started/saving-changes/hero.svg" /></p>
 <h2 id="git-add">git add</h2>
-<p>Bu komut depodaki bir değişikliği Geçiş Bölgesi'ne (Staging Area) ekler.</p></div>
+<p>Bu komut depodaki bir değişikliği Geçiş Bölgesi'ne (Staging Area) ekler. Bir sonraki commit'de hangi dosyalarda değişiklikler olduğunu belirtir. Bununla beraber <code>git add</code> komutunun depo üzerinde bir etkisi olmaz. Yapılan değişiklikler depo içine ancak <code>git commit</code> komutu ile dahil edilebilir. Bu nedenle <code>git add</code> komutu ile eklenen dosyalar Geçiş Bölgesi'ne alınır.</p>
+<p>Bu komutlar ile birlikte <code>git status</code> komutu da kullanılmaktadır. Bu komut ile de çalıştığımız deponun ve Geçiş Bölgesi'nin genel durumuna bakılabilir.</p>
+<h3 id="kullanm">Kullanımı</h3>
+<pre><code>git add &lt;dosya&gt;
+</code></pre>
+
+<p>Bir sonraki committe kaydedilmek üzere <code>&lt;dosya&gt;</code> içindeki değişiklikleri Geçiş Bölgesi'ne ekler.</p>
+<pre><code>git add &lt;dizin&gt;
+</code></pre>
+
+<p>Bir sonraki committe kaydedilmek üzere <code>&lt;dizin&gt;</code> içindeki değişiklikleri Geçiş Bölgesi'ne ekler.</p>
+<pre><code>git add -p
+</code></pre>
+
+<p>Bu komut ile interaktif olarak Geçici Bölge süreci başlatılır. Üzerinde değişiklik yapılmış dosyalar için ne yapmak istediğinizi sorar. Cevap olarak;</p>
+<ul>
+<li><code>y</code> - Geçiş Bölgesi'ne göndermek için </li>
+<li><code>n</code> - Gözardı etmek için</li>
+<li><code>q</code> - Gözardı et ve kalan değişiklikler için işlem yapmadan süreci bitir.</li>
+<li><code>a</code> - Geçiş Bölgesi'ne gönder ve kalan değişiklikler için de aynısını yap.</li>
+<li><code>d</code> - Dosya bazlı olarak mevcut değişikliği kalan değişiklikleri gözardı et.</li>
+</ul>
+<h3 id="tartsma">Tartışma</h3></div>
             
         </div>
 
