@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Depo (Repository) Oluşturalım - Git Dersleri</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Depo (Repository) Oluşturalım";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Git Dersleri</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Ana Sayfa</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Başlangıç</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Depo (Repository) Oluşturalım</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#depo-repository-olusturalm">Depo (Repository) Oluşturalım</a></li>
+                
+                    <li><a class="toctree-l4" href="#git-init">git init</a></li>
+                
+                    <li><a class="toctree-l4" href="#git-clone">git clone</a></li>
+                
+                    <li><a class="toctree-l4" href="#git-config">git config</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../degisiklikleri-kaydedelim/">Değişiklikleri Kaydedelim</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Git Dersleri</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Başlangıç &raquo;</li>
+        
+      
+    
+    <li>Depo (Repository) Oluşturalım</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="depo-repository-olusturalm">Depo (Repository) Oluşturalım</h1>
+<p><img alt="Depo (Repository) Oluşturalım" src="https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/hero.svg" /></p>
+<p>Bu ders en önemli Git komutlarından bazıları hakkında bilgiler içermektedir. İlk önce versiyon kontrollü bir projeye başlamak için yapılması gereken ilk iş olan repository oluşturma kısmından bahsedilecek. Daha sonraki kısımlarda ise günlük olarak kullanılan git komutları anlatılacak.</p>
+<p>Bu dersin sonunda yeni bir git destekli bir proje oluşturabilecek, mevcut projenin anlık kopyasını alabilecek ve proje üzerinde ne gibi değişiklikler yapıldığını görebileceksiniz.</p>
+<h2 id="git-init">git init</h2>
+<p><code>git init</code> komutu ile yeni bir Git deposu oluşturulur. Henüz git versiyonlama aktif edilmemiş bir proje için ya da henüz başlangıç yapılmamış yeni bir proje için bu komut ile versiyonlamayı aktif hale getirebilirsiniz. Bu komut haricindeki diğer Git komutları genel olarak bu komuttan sonra kullanılabilir olacaktır. Bu nedenle yeni bir projede ilk çalıştırılacak komut da budur.</p>
+<p><code>git init</code> komutu çalıştırılan dizinde <code>.git</code> isminde yeni bir dizin oluşturur. Bu dizin içinde git deposu için gerekli tüm bilgiler bulunmaktadır. Bu bilgilere genel olarak <code>metadata</code> denmektedir. SVN gibi projedeki her klasörün içine revizyon bilgileri tutmak için klasör ya da dosya oluşturmaz. Projenin kök dizinine sadece bir adet dizin oluşturur. Bu şekilde projenin içi genel olara kirlenmemiş olur. (Daha önce SVN kullananlar ve ilk kez Git öğrenenler için bu, önemli bir ayrıntıdır.)</p>
+<h3 id="kullanm">Kullanımı</h3>
+<pre><code>git init
+</code></pre>
+
+<p>Çalıştırıldığı dizini Git deposuna çevirecektir. Bu komut çalıştırılan dizine <code>.git</code> adında bir klasör oluşturacaktır. Bu komut ile birlikte proje üzerinde yapılacak değişiklikler kaydedilmeye hazır demektir.</p>
+<pre><code>git init &lt;dizin&gt;
+</code></pre>
+
+<p>Bu komut <code>dizin</code> adında bir klasör oluşturur ve klasörün içini de git deposuna çevirir.</p>
+<pre><code>git init --bare &lt;dizin&gt;
+</code></pre>
+
+<p>Üzerinde geliştirme yapılmamak üzere ve merkez depolar oluşturmak için kullanılır. Geliştiriciler arasında paylaşılan merkezi depolar <code>--bare</code> ile işaretlenerek oluşturulmalıdır. Bu şekilde yalın depolar oluşturulurken genel olarak kullanılan dizinin sonuna <code>.git</code> eklenir. Örneğin yalın bir deponun klasör ismi şu şekilde olabilir: <code>proje-dizini.git</code></p>
+<h3 id="tartsma">Tartışma</h3>
+<p>SVN ile karşılaştırıldığında <code>git init</code> komutu ile versiyon kontrollü projeler oluşturmak son derece kolaydır. Git, bir depo oluşturmanıza, dosyaları içeri aktarmanıza ya da mevcut bir depoyu kopyalamanıza gerek duymaz. Tek yapmanız gereken <code>cd</code> komutuyla dizinin içine girmeniz ve <code>git init</code> komutunu çalıştırmanız. Böylece Git deponuz hazır hale gelecektir.</p>
+<p>Çoğu projede <code>git init</code> komutu merkezi bir depo oluşturulurken kullanılır ve geliştiriciler kendi bilgisayarlarında <code>git clone</code> komutunu kullanırlar. Böylece merkezi depoda yer alan projeyi kendi bilgisayarlarına almış olur ve Git deposu kullanıma hazır olacaktır.</p>
+<h4 id="bare-yaln-cplak-depolar">Bare (yalın, çıplak) Depoları</h4>
+<p><code>--bare</code> işareti ile  Git deposu oluşturulur ancak çalışma dizini yer almaz. Bu gibi depolarda dosyaları düzenlemek ya da değişiklikleri commit etmek mümkün değildir. Merkez Git depoları yalın depo olarak oluşturulmalıdır. Çünkü yalın olmayan bir depoya dalları göndermek değişiklikerin üzerine yazılmasını sağlayabilir. Şu şekilde de düşünebiliriz. Eğer bir depo <code>--bare</code> işareti ile oluşturulduysa bu depo kodların sadece saklandığı ve üzerinde geliştirme yapılmadığı bir depo olarak düşünülebilir. Böylece merkezi depoya yalın depo, diğer geliştiricilerin depolarına  da yalın olmayan depolar debilebilir.</p>
+<p><img alt="Yalın ve Yalın Olmayan Depolar" src="https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/01.svg" /></p>
+<h3 id="ornek">Örnek</h3>
+<p>Bir projenin yerel bir kopyasını oluşturmak için genel olarak <code>git clone</code> kullanılmakta. <code>git init</code> komutu ise merkezi proje depoları oluşturmak için kullanılır. Örnek kodlar şu şekilde olabilir;</p>
+<pre><code>ssh &lt;kullanici&gt;@&lt;host&gt;
+cd /proje/deposunun/yolu
+git init --bare proje-dizini.git
+</code></pre>
+
+<p>Öncelikle merkezi deponun yer alacağı sunucuya ssh ile giriş yapınız. Daha sonra projenin hangi dizinde olmasını istiyorsanız o dizini açın. Son olarak ise <code>--bare</code> kullanarak merkezi depoyu oluşturun. Daha sonra geliştiriciler projenin bir kopyasını kendi bilgisayarlarına <code>git clone proje-dizini.git</code> şeklinde alabilirler. </p>
+<h2 id="git-clone">git clone</h2>
+<p>Bu komut mevcut bir git deposunu kopyalamak için kullanılmaktadır. Bu komut SVN'deki <code>svn checkout</code> ile hemen hemen aynı işlevi görür. Farklı olarak ise kopyalanan deponun tam teşekküllü bir Git deposu olmasıdır. Yani kendi geçmiş kayıtlarına sahip ve kendi dosyaları ile klasörleri olan merkezi depodan tamamen izole edilmiş haldedir.</p>
+<h3 id="kullanm_1">Kullanımı</h3>
+<pre><code>git clone &lt;depo&gt;
+</code></pre>
+
+<p>Bu komut <code>&lt;depo&gt;</code> adresinde yer alan deponun bir kopyasını alır ve çalıştırıldığı dizine kaydeder. Kaynak depo kişinin kendi bilgisayarında olacağı gibi HTTP ya da SSH gibi protokoller ile erişilebilen bir makina üzerinde de olabilir.</p>
+<pre><code>git clone &lt;depo&gt; &lt;dizin&gt;
+</code></pre>
+
+<p>Bu komut ile de kaynak depo bulunduğumuz dizinde, komutta belirtilen <code>&lt;dizin&gt;</code> adında bir dizin oluşturulacak ve kaynak depo içeriği bu oluşturulan klasör içine kopyalanacaktır.</p>
+<h3 id="tartsma_1">Tartışma</h3>
+<p>Bir proje merkezi git deposu olarak oluşturulduysa <code>git clone</code> komutu geliştirme ve değişiklik yapmak için projenin bir kopyasını almak için kullanılır. <code>git init</code> komutunda olduğu gibi klonlama işlemi bir kez yapılır. Kopyalama tamamlandıktan sonra tüm versiyon kontrol işlemleri ve proje üzerinde değişiklikler yapılmaya hazır demektir. </p>
+<h4 id="depodan-depoya-birlikte-calsma-collaboration">Depo'dan Depo'ya Birlikte Çalışma (Collaboration)</h4>
+<p>Git'in çalışan kopya mantığı SVN ile karşılaştırıldığında çok farklıdır. Git ile çalışırken her depo kendi başına tam teşekküllü bir depo olarak ele alınmalıdır.</p>
+<p>Bu farklı bakış açısı Git projesinde birlikte çalışma mantığı ile SVN projesindeki birlikte çalışma mantığının birbirinden farklı olmasını sağlar. SVN'de bilgisayarımızdaki proje kopyası merkezi depoya bağımlu iken Git ile bu ilişki Depo'dan Depo'ya şeklindedir. SVN'in merkezi deposuna çalışan kopyayı göndermek yerine Git, depodan depoya <code>push</code> ve <code>pull</code> komutlarını kullanarak veri aktarımı sağlar.</p>
+<p><img alt="SVN'de Merkezi Depo ve Çalışan Kopya Mantığı" src="https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/03.svg" /></p>
+<p><img alt="Git'de Depo'dan Depo'ya Mantığı" src="https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/02.svg" /></p>
+<p>Esasen her bir Git deposuna özel anlam da yüklenebilir. Örneğin depolardan birisini merkezi depo olarak görmek ve diğerlerini çalışan kopya görmek gibi. Böyle bir yaklaşım Merkezi İş Akışı şeklinde özetlenebilir. Bu yaklaşım ile versiyon kontrol sistemlerine baktığımızda bakış açımızın daha başarılı olduğunu söyleyebiliriz.</p>
+<h3 id="ornek_1">Örnek</h3>
+<p>Aşağıdaki örnek <code>deneme.com</code> üzerinde ssh ile erişilebilen merkezi bir depodan lokal kopya oluşturmak için verilebilir;</p>
+<pre><code>git clone ssh://ahmet@deneme.com/proje/deposunun/yolu/proje-dizini.git 
+cd proje-dizini
+# Proje üzerinde çalışmaya başla
+</code></pre>
+
+<p>İlk satırdaki komut bulunduğumuz dizinde yeni bir <code>proje-dizini</code> oluşturur ve merkez deponun içeriğini oluşturulan bu dizine kopyalar. Daha sonra proje klasörünün içine girebilir dosyalar üzerinde değişikliklere başlayabilir, yapılan değişiklikleri merkezi depoya ya da diğer depolara gönderebilirsiniz. Ayrıca <code>.git</code> uzantısı klonlanmış depo için göz ardı edilecektir. Böylece klonlanmış yeni lokal depomuz yalın olmayan (non-bare) bir depo olacaktır.</p>
+<h2 id="git-config">git config</h2>
+<p>Bu komut ile bilgisayarınızdaki Git programını ya da her bir projeyi kendi içinde konfigüre edebilirsiniz. Bu komut ile kullanıcıya ait bilgilerden tutunda bir deponun nasıl davranacağına kadar herşeyi konfigüre etmenizi sağlar. Genel olarak kullanılan konfigürasyon seçenekleri aşağıda listelenmiştir.</p>
+<h3 id="kullanm_2">Kullanımı</h3>
+<pre><code>git config user.name &lt;kullaniciadi&gt;
+</code></pre>
+
+<p>Bu komut ile aktif depo üzerinde geliştirme yapan geliştiricinin adı tanımlanmış olur. Genel olarak <code>--global</code> işareti ile birlikte kullanılmaktadır.</p>
+<pre><code>git config --global user.name &lt;kullaniciadi&gt;
+</code></pre>
+
+<p>Bu şekilde kullanıldığında sistemi kullanan kullanıcının yapacağı tüm commitlerde kullanılacak isim bilgisi kaydedilmiş olacaktır.</p>
+<pre><code>git config --global user.email &lt;mailadresi&gt;
+</code></pre>
+
+<p>Kullanıcının yapacağı commitlerde kullanılmak üzere kullanıcıya ait mail adresini genel olarak ayarlak için kullanılır.</p>
+<pre><code>git config --global alias.&lt;takma-isim&gt; &lt;git-komutu&gt;
+</code></pre>
+
+<p>Bir Git komutu için takma isim oluşturur. Böylece aynı işi yapan bir komut farklı bir isim ile kullanılabilir.</p>
+<pre><code>git config --system core.editor &lt;metin-etitörü&gt;
+</code></pre>
+
+<p>Git komutları için kullanılacak varsayılan metin editörünü ayarlamak için kullanılır. Ör: geany</p>
+<pre><code>git config --global --edit
+</code></pre>
+
+<p>Bu komut ile varsayılan metin editörü kullanılarak global konfigürasyon dosyası düzenlenmek üzere açılır.</p>
+<h3 id="tartsma_2">Tartışma</h3>
+<p>Tüm konfigürasyon seçenekleri düz metin dosyalarında saklanır. Bu ayarları değiştirmek için <code>git config</code> komutu, komut satırında kullanılmaya uygundur. Genel olarak ilk Git kurulumunda <code>--global</code> olarak bir çok ayar yapılmakta ve proje geliştirme aşamasına geçilmektedir.</p>
+<p>Git konfigürasyon seçeneklerini 3 farklı dosya da saklar. Bunlar, depo, kullanıcı ve sistem şeklindedir.</p>
+<ul>
+<li><code>&lt;depo&gt;/.git/config</code> - Depo bazlı ayarlar.</li>
+<li><code>~/.gitconfig</code> Kullanıcı bazlı ayarlar. <code>--global</code> işareti ile ayarlanan konfigürasyon seçenekleri bu dosya da saklanır.</li>
+<li><code>$(prefix)/etc/gitconfig</code> - Sistem genelinde kullanılan ayarlar.</li>
+</ul>
+<p>Bu dosyalardaki aynı ayar yer alırsa öncelik depo, sonra kullanıcı ve sonra da sistem'dir. Bu dosyalardan herhangi birini açtığınızda aşağıdakine benzer bir içerik görünecektir.</p>
+<pre><code>[user] 
+    name = Ahmet Hamdi
+    email = ahmet@deneme.com
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    up = rebase
+    ci = commit
+[core]
+    editor = geany
+    excludesfile = /home/ahmethamdi/.gitignore_global 
+</code></pre>
+
+<p>Bu bilgileri değiştirdiğinizde de <code>git config</code> ile aynı etki görülecektir.</p>
+<h3 id="ornek_2">Örnek</h3>
+<p>Git'i kurduktan sonra ilk iş olarak adınızı ve mail adresinizi ayarlamak ve bazı varsayılan ayarları değiştirmek olacaktır. Yapılan ayarlar genel olarak aşağıdakiler benzer şeyler olacaktır.</p>
+<pre><code># Git bizi nasıl tanısın istersiniz
+git config --global user.name &quot;Ahmet Hamdi&quot;
+git config --global user.email ahmet@deneme.com
+</code></pre>
+
+<pre><code># Favori metin editörünü ayarlayalım
+git config --global core.editor geany
+</code></pre>
+
+<pre><code># SVN benzeri bazı komut alsyasları oluşturalım
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.up rebase
+git config --global alias.ci commit
+</code></pre>
+
+<p>Bu komutlar ile yapılan değişiklikler <code>~/.gitconfig</code> dosyasına yansıyacaktır.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../degisiklikleri-kaydedelim/" class="btn btn-neutral float-right" title="Değişiklikleri Kaydedelim"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../.." class="btn btn-neutral" title="Ana Sayfa"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../degisiklikleri-kaydedelim/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
