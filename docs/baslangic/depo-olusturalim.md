@@ -1,6 +1,6 @@
 # Depo (Repository) Oluşturalım
 
-![Depo (Repository) Oluşturalım](https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/hero.svg)
+![Depo (Repository) Oluşturalım](https://www.atlassian.com/git/images/tutorials/getting-started/setting-up-a-repository/hero.svg)
 
 Bu ders en önemli Git komutlarından bazıları hakkında bilgiler içermektedir. İlk önce versiyon kontrollü bir projeye başlamak için yapılması gereken ilk iş olan repository oluşturma kısmından bahsedilecek. Daha sonraki kısımlarda ise günlük olarak kullanılan git komutları anlatılacak.
 
