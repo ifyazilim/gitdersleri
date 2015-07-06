@@ -1,0 +1,7 @@
+site_name: Git Dersleri
+pages:
+  - Ana Sayfa: index.md
+  - Başlangıç:
+    - Depo (Repository) Oluşturalım: baslangic/depo-olusturalim.md
+    - Değişiklikleri Kaydedelim: baslangic/degisiklikleri-kaydedelim.md
+theme: readthedocs
