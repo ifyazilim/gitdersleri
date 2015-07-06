@@ -41,7 +41,10 @@ Bu komut ```dizin``` adında bir klasör oluşturur ve klasörün içini de git 
 git init --bare <dizin>
 ```
 
-- [ ] yapılacak
+Üzerinde geliştirme yapılmamak üzere ve merkez depolar oluşturmak için kullanılır. Geliştiriciler arasında 
+paylaşılan merkezi depolar ```--bare``` ile işaretlenerek oluşturulmalıdır. Bu şekilde yalın depolar oluşturulurken 
+genel olarak kullanılan dizinin sonuna ```.git``` eklenir. Örneğin yalın bir deponun klasör ismi şu şekilde olabilir: 
+```proje-dizini.git```
 
 ### Tartışma
 
@@ -64,3 +67,27 @@ bu depo kodların sadece saklandığı ve üzerinde geliştirme yapılmadığı 
 Böylece merkezi depoya yalın depo, diğer geliştiricilerin depolarına  da yalın olmayan depolar debilebilir.
 
 ![Yalın ve Yalın Olmayan Depolar](https://cdn.rawgit.com/irfanevrens/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/01.svg)
+
+### Örnek
+
+Bir projenin yerel bir kopyasını oluşturmak için genel olarak ```git clone``` kullanılmakta. ```git init``` komutu 
+ise merkezi proje depoları oluşturmak için kullanılır. Örnek kodlar şu şekilde olabilir;
+
+```
+ssh <kullanici>@<host>
+cd /proje/deposunun/yolu
+git init --bare proje-dizini.git
+```
+
+Öncelikle merkezi deponun yer alacağı sunucuya ssh ile giriş yapınız. Daha sonra projenin hangi dizinde olmasını 
+istiyorsanız o dizini açın. Son olarak ise ```--bare``` kullanarak merkezi depoyu oluşturun. Daha sonra geliştiriciler 
+projenin bir kopyasını kendi bilgisayarlarına ```git clone proje-dizini.git``` şeklinde alabilirler. 
+
+## git clone
+
+Bu komut mevcut bir git deposunu kopyalamak için kullanılmaktadır. Bu komut SVN'deki ```svn checkout``` ile hemen 
+hemen aynı işlevi görür. Farklı olarak ise kopyalanan deponun tam teşekküllü bir Git deposu olmasıdır. Yani kendi 
+geçmiş kayıtlarına sahip ve kendi dosyaları ile klasörleri olan merkezi depodan tamamen izole edilmiş haldedir.
+
+### Kullanımı
+
