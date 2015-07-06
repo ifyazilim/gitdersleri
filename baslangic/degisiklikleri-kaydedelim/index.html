@@ -159,6 +159,12 @@
 <p><code>git add</code> komutu SVN'deki dosyayı depoya eklemeye yarayan <code>svn add</code> komutu ile karıştırılmamalıdır. Git'de <code>git add</code> komutu ara bir katmanda daha soyut bir şekilde çalışır. Yani bir dosya üzerinde her yaptığınız değişikliği <code>git add</code> komutunun çalıştırılması gerekir. Bu işlemin her defasında yapılması gereksiz gibi görünebilir. Fakat bu şekilde çalışmak üzerinde çalışılan projenin daha organize bir şekilde geliştirilmesini sağlar.</p>
 <h4 id="gecis-bolgesi-the-staging-area">Geçiş Bölgesi (The Staging Area)</h4>
 <p>Geçiş Bölgesi Git'in diğer sistemlere nazaran benzersiz özelliklerinden  birisidir. Özellikle SVN'den ya da Mercurial'dan gelen kullanıcılar için bu özelliği anlamak biraz zaman alabilir. Daha basit ifade etmek gerekirse, Geçiş Bölgesi, proje geçmişi ile çalışma dizini arasında tampon bir bölgedir.</p>
+<p>Yapılan her değişikliği doğrudan commitlemek yerine Geçiş Bölgesi'ni kullanmak bir biri ile ilişkili ve anlamlı değişiklikleri gruplamamızı sağlar. Daha sonra topluca yaptığımız bu değişiklikler commit edilir ve proje geçmişine dahil edilir. Böylece bir projede bir birinden bağımsız dosyalar üzerinde yapılan değişiklikler daha sonra bir biri ile ilişkili ve mantıklı gruplar halinde commitlenir. Sadece Git'de değil, tüm versiyon kontrol sistemlerinde commitlerin atomik olması ve geri dönüşleri kolayca yapabilmeyi sağlamalıdır. Bunun yanında yapılan hataları ve ortaya çıkabilecek bugları da temizlemek projenin geneline dokunmadan daha kolayca yapılacaktır.</p>
+<h3 id="ornek">Örnek</h3>
+<p>Yeni bir projeye başlarken <code>git add</code> komutu SVN'deki <code>svn import</code> komutu ile aynı anlama gelir. Bulunduğumuz dizinde ilk commit'i göndermek için aşağıdaki komutlar kullanılabilir.</p>
+<pre><code>git add .
+git commit
+</code></pre>
               
             </div>
           </div>
