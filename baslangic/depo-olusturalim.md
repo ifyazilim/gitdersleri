@@ -60,3 +60,17 @@ Bu komut mevcut bir git deposunu kopyalamak için kullanılmaktadır. Bu komut S
 
 ### Kullanımı
 
+```
+git clone <depo>
+```
+
+Bu komut ```<depo>``` adresinde yer alan deponun bir kopyasını alır ve çalıştırıldığı dizine kaydeder. Kaynak depo kişinin kendi bilgisayarında olacağı gibi HTTP ya da SSH gibi protokoller ile erişilebilen bir makina üzerinde de olabilir.
+
+```
+git clone <depo> <dizin>
+```
+
+Bu komut ile de kaynak depo bulunduğumuz dizinde, komutta belirtilen ```<dizin>``` adında bir dizin oluşturulacak ve kaynak depo içeriği bu oluşturulan klasör içine kopyalanacaktır.
+
+### Tartışma
+
