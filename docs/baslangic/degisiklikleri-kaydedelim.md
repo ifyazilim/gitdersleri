@@ -80,4 +80,15 @@ Aynı isimde olsa da bu komut ```svn commit``` komutundan farklıdır. Git'de ya
 git commit
 ```
 
-Geçiş bölgesini commit etmek için kullanılır.
+Geçiş bölgesini commit etmek için kullanılır. Bu komut kullanıldığında commit mesajının girilmesi için bir metin editörü açılır ve sizden commit ile ilgili bir mesaj girmeniz beklenir. Mesaj girildikten sonra dosyayı kaydedip çıkış yaptığınızda aşağıdaki komutun işlevi yapılmış olur.
+
+```
+git commit -m "<mesaj>"
+```
+
+Eğer isterseniz metin editörü açmadan doğrudan komut satırına yukarıdaki ```<mesaj>``` alanına yapılan değişiklikler ile alakalı bir açıklama girilerek Geçiş Bölgesi'ndeki değişiklikler proje geçmişne commit edilmiş olur.
+
+```
+git commit -a
+```
+
