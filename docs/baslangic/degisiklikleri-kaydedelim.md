@@ -68,6 +68,16 @@ git commit
 
 Yukarıdaki komut aynı zamanda mevcut dosya değişkliklerinde de kullanılabilir. Git açısından bakıldığında bir dosyanın henüz yeni olması ya da üzerinde değişiklikler yapılan eski bir dosya olması önemli değildir. Her halükarda yapılan değişiklikler öncelikle Geçiş Bölgesi'ne alınır ve daha sonra commitlenir.
 
-## ```git commit```
+## git commit
 
 Bu komut ile Geçiş Bölgesi'nde yer alan değişiklikler proje geçmişine eklenir ve Geçiş Bölgesi temizlenir. Commitlenmiş değişiklikler bir projenin güvenli bir kopyası anlamındadır. Git commitlenen bu değişiklikleri özellikle müdahale edilmediği müddetçe değiştirmeyecektir. Bu komut ```git add``` komutu ile birlikte en önemli Git komutlarındandır.
+
+Aynı isimde olsa da bu komut ```svn commit``` komutundan farklıdır. Git'de yapılan değişiklikler lokal depoya commitlenir ve diğer depolar ile bir etkileşimde bulunmaz.
+
+### Kullanımı
+
+```
+git commit
+```
+
+Geçiş bölgesini commit etmek için kullanılır.
