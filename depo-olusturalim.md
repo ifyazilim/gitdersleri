@@ -1,4 +1,4 @@
-# Repository (depo) Oluşturalım
+# Depo (Repository) Oluşturalım
 
 Bu ders en önemli Git komutlarından bazıları hakkında bilgiler içermektedir. İlk önce 
 versiyon kontrollü bir projeye başlamak için yapılması gereken ilk iş olan repository 
@@ -63,4 +63,4 @@ yazılmasını sağlayabilir. Şu şekilde de düşünebiliriz. Eğer bir depo `
 bu depo kodların sadece saklandığı ve üzerinde geliştirme yapılmadığı bir depo olarak düşünülebilir. 
 Böylece merkezi depoya yalın depo, diğer geliştiricilerin depolarına  da yalın olmayan depolar debilebilir.
 
-![Yalın ve Yalın Olmayan Depolar](resimler/baslangic-rehberi/depo-olusturalim/01.svg)
+![Yalın ve Yalın Olmayan Depolar](https://cdn.rawgit.com/irfanevrens/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/01.svg)
