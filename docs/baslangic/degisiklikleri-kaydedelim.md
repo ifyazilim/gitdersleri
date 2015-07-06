@@ -47,3 +47,14 @@ Bir proje üzerinde çalışmak genel olarak düzenle/geçiş bölgesine gönder
 #### Geçiş Bölgesi (The Staging Area)
 
 Geçiş Bölgesi Git'in diğer sistemlere nazaran benzersiz özelliklerinden  birisidir. Özellikle SVN'den ya da Mercurial'dan gelen kullanıcılar için bu özelliği anlamak biraz zaman alabilir. Daha basit ifade etmek gerekirse, Geçiş Bölgesi, proje geçmişi ile çalışma dizini arasında tampon bir bölgedir.
+
+Yapılan her değişikliği doğrudan commitlemek yerine Geçiş Bölgesi'ni kullanmak bir biri ile ilişkili ve anlamlı değişiklikleri gruplamamızı sağlar. Daha sonra topluca yaptığımız bu değişiklikler commit edilir ve proje geçmişine dahil edilir. Böylece bir projede bir birinden bağımsız dosyalar üzerinde yapılan değişiklikler daha sonra bir biri ile ilişkili ve mantıklı gruplar halinde commitlenir. Sadece Git'de değil, tüm versiyon kontrol sistemlerinde commitlerin atomik olması ve geri dönüşleri kolayca yapabilmeyi sağlamalıdır. Bunun yanında yapılan hataları ve ortaya çıkabilecek bugları da temizlemek projenin geneline dokunmadan daha kolayca yapılacaktır.
+
+### Örnek
+
+Yeni bir projeye başlarken ```git add``` komutu SVN'deki ```svn import``` komutu ile aynı anlama gelir. Bulunduğumuz dizinde ilk commit'i göndermek için aşağıdaki komutlar kullanılabilir.
+
+```
+git add .
+git commit
+```
