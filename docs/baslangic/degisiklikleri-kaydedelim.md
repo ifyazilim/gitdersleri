@@ -26,3 +26,13 @@ Bir sonraki committe kaydedilmek üzere ```<dizin>``` içindeki değişiklikleri
 git add -p
 ```
 
+Bu komut ile interaktif olarak Geçici Bölge süreci başlatılır. Üzerinde değişiklik yapılmış dosyalar için ne yapmak istediğinizi sorar. Cevap olarak;
+ 
+  * ```y``` - Geçiş Bölgesi'ne göndermek için 
+  * ```n``` - Gözardı etmek için
+  * ```q``` - Gözardı et ve kalan değişiklikler için işlem yapmadan süreci bitir.
+  * ```a``` - Geçiş Bölgesi'ne gönder ve kalan değişiklikler için de aynısını yap.
+  * ```d``` - Dosya bazlı olarak mevcut değişikliği kalan değişiklikleri gözardı et.
+
+### Tartışma
+
