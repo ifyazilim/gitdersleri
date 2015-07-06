@@ -40,7 +40,7 @@ SVN ile karşılaştırıldığında ```git init``` komutu ile versiyon kontroll
 
 ```--bare``` işareti ile  Git deposu oluşturulur ancak çalışma dizini yer almaz. Bu gibi depolarda dosyaları düzenlemek ya da değişiklikleri commit etmek mümkün değildir. Merkez Git depoları yalın depo olarak oluşturulmalıdır. Çünkü yalın olmayan bir depoya dalları göndermek değişiklikerin üzerine yazılmasını sağlayabilir. Şu şekilde de düşünebiliriz. Eğer bir depo ```--bare``` işareti ile oluşturulduysa bu depo kodların sadece saklandığı ve üzerinde geliştirme yapılmadığı bir depo olarak düşünülebilir. Böylece merkezi depoya yalın depo, diğer geliştiricilerin depolarına  da yalın olmayan depolar debilebilir.
 
-![Yalın ve Yalın Olmayan Depolar](https://cdn.rawgit.com/irfanevrens/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/01.svg)
+![Yalın ve Yalın Olmayan Depolar](https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/01.svg)
 
 ### Örnek
 
@@ -74,3 +74,14 @@ Bu komut ile de kaynak depo bulunduğumuz dizinde, komutta belirtilen ```<dizin>
 
 ### Tartışma
 
+Bir proje merkezi git deposu olarak oluşturulduysa ```git clone``` komutu geliştirme ve değişiklik yapmak için projenin bir kopyasını almak için kullanılır. ```git init``` komutunda olduğu gibi klonlama işlemi bir kez yapılır. Kopyalama tamamlandıktan sonra tüm versiyon kontrol işlemleri ve proje üzerinde değişiklikler yapılmaya hazır demektir. 
+
+#### Depo'dan Depo'ya Birlikte Çalışma (Collaboration)
+
+Git'in çalışan kopya mantığı SVN ile karşılaştırıldığında çok farklıdır. Git ile çalışırken her depo kendi başına tam teşekküllü bir depo olarak ele alınmalıdır.
+
+Bu farklı bakış açısı Git projesinde birlikte çalışma mantığı ile SVN projesindeki birlikte çalışma mantığının birbirinden farklı olmasını sağlar. SVN'de bilgisayarımızdaki proje kopyası merkezi depoya bağımlu iken Git ile bu ilişki Depo'dan Depo'ya şeklindedir. SVN'in merkezi deposuna çalışan kopyayı göndermek yerine Git, depodan depoya ```push``` ve ```pull``` komutlarını kullanarak veri aktarımı sağlar.
+
+![SVN'de Merkezi Depo ve Çalışan Kopya Mantığı](https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/03.svg)
+
+![Git'de Depo'dan Depo'ya Mantığı](https://cdn.rawgit.com/ifyazilim/gitdersleri/master/resimler/baslangic-rehberi/depo-olusturalim/02.svg)
