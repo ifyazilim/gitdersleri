@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>http://ifyazilim.github.io/gitdersleri/</loc>
-     <lastmod>2015-07-06</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://ifyazilim.github.io/gitdersleri/</loc>
+         <lastmod>2023-06-14</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>http://ifyazilim.github.io/gitdersleri/baslangic/depo-olusturalim/</loc>
-     <lastmod>2015-07-06</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://ifyazilim.github.io/gitdersleri/baslangic/degisiklikleri-kaydedelim/</loc>
+         <lastmod>2023-06-14</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://ifyazilim.github.io/gitdersleri/baslangic/degisiklikleri-kaydedelim/</loc>
-     <lastmod>2015-07-06</lastmod>
-     <changefreq>daily</changefreq>
+         <loc>https://ifyazilim.github.io/gitdersleri/baslangic/depo-olusturalim/</loc>
+         <lastmod>2023-06-14</lastmod>
+         <changefreq>daily</changefreq>
     </url>
-        
-    
-
 </urlset>
